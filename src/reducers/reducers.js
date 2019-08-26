@@ -6,7 +6,7 @@ const initialState = {
   chips: null,
 };
 
-function reducer (state = initialState, action) {
+function reducer(state = initialState, action) {
   switch(action.type) {
     case 'ADD_DRINK':
       return { ...state, drink: action.payload };
@@ -14,7 +14,12 @@ function reducer (state = initialState, action) {
       return { ...state, sandwich: action.payload };
     case 'ADD_CHIPS':
       return { ...state, chips: action.payload };
-    case 'REMOVE_'
+    case 'REMOVE_FOOD':
+      return { drinks: null, sandwich: null, chips: null };
+    default:
+      return state;
     
   }
 }
+
+const store = createStore(reducer);

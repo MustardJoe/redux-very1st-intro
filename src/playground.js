@@ -7,7 +7,7 @@ const initialState = {
 };
 
 function reducer(state = initialState, action) {
-  switch (action.type) {
+  switch(action.type) {
     case 'ADD_DRINK':
       return { ...state, drink: action.payload };
     case 'ADD_SANDWICH':
